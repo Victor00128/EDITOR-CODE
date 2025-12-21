@@ -4,8 +4,7 @@
 
 Zenith IDE es un editor de código moderno construido con **Electron** y **React**, diseñado para potenciar la productividad mediante la integración profunda de Inteligencia Artificial (Gemini). No es solo un wrapper de chat; el agente tiene control sobre el sistema de archivos, terminal real y capacidad de "auto-reparación".
 
-![Zenith IDE Screenshot](https://via.placeholder.com/800x450?text=Insertar+Screenshot+Aqui)
-*(Te recomiendo subir una captura de pantalla aquí)*
+![Zenith IDE](./assets/zenith-screenshot.png)
 
 ## 🚀 Características Principales
 
@@ -30,16 +29,65 @@ Zenith IDE es un editor de código moderno construido con **Electron** y **React
 
 ## 🛠️ Tech Stack
 
-- **Core:** Electron, React, TypeScript, Vite.
-- **State Management:** Zustand.
-- **Editor & Terminal:** Monaco Editor (React), XTerm.js, Node-PTY.
-- **AI:** Google Generative AI (Gemini).
-- **Styling:** TailwindCSS.
-- **File System:** Node.js FS, Chokidar (Watchers).
+| Categoría | Tecnologías |
+|-----------|-------------|
+| **Core** | Electron, React, TypeScript, Vite |
+| **State Management** | Zustand |
+| **Editor & Terminal** | Monaco Editor, XTerm.js, Node-PTY |
+| **AI** | Google Generative AI (Gemini) |
+| **Styling** | TailwindCSS |
+| **File System** | Node.js FS, Chokidar |
 
 ## 📦 Instalación y Uso
 
 1. **Clonar el repositorio**
    ```bash
-   git clone https://github.com/TU_USUARIO/zenith-ide.git
-   cd zenith-ide
+   git clone https://github.com/Victor00128/EDITOR-CODE.git
+   cd EDITOR-CODE
+   ```
+
+2. **Instalar dependencias**
+   ```bash
+   npm install
+   ```
+
+3. **Configurar variables de entorno**
+   
+   Crea un archivo `.env` en la raíz del proyecto:
+   ```env
+   GEMINI_API_KEY=tu_api_key_aqui
+   ```
+   
+   Obtén tu API key en: [Google AI Studio](https://aistudio.google.com/app/apikey)
+
+4. **Ejecutar en modo desarrollo**
+   ```bash
+   npm run dev
+   ```
+
+5. **Crear build de producción**
+   ```bash
+   npm run electron-pack
+   ```
+
+## 🎯 Uso Básico
+
+1. Abre el IDE y selecciona una carpeta de proyecto con **"Open Local Folder"**
+2. Navega por tus archivos en el **Explorer** (panel izquierdo)
+3. Edita código en el **Editor** central con syntax highlighting
+4. Usa el **AI Agent** (panel derecho) para:
+   - Generar código nuevo
+   - Modificar archivos existentes
+   - Obtener explicaciones del código
+5. Visualiza tus cambios en tiempo real con el **Live Preview**
+6. Ejecuta comandos en la **Terminal** integrada
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+<p align="center">
+  Desarrollado con 💚 y mucho ☕
+</p>
