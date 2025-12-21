@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilo Hacker Global */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background-color: #050505;
+  color: #cccccc;
+  font-family: 'JetBrains Mono', 'Courier New', monospace; /* Forzar fuente mono */
+}
+
+/* Scrollbars oscuros estilo terminal */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff00; /* Verde al pasar el mouse */
+}
+
+/* Utilidad para ocultar texto excesivo */
+.truncate-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

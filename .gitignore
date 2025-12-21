@@ -1,0 +1,27 @@
+# Deps
+node_modules/
+npm-debug.log*
+
+# Build
+dist/
+dist-electron/
+build/
+
+# Env
+.env
+.env.local
+*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.zip
+*.log
