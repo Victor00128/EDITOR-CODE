@@ -85,9 +85,3 @@ Zenith IDE es un editor de código moderno construido con **Electron** y **React
 ## 📄 Licencia
 
 Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
-
----
-
-<p align="center">
-  Desarrollado con 💚 y mucho ☕
-</p>
