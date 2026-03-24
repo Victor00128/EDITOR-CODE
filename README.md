@@ -6,6 +6,10 @@ Zenith IDE es un editor de código moderno construido con **Electron** y **React
 
 ![Zenith IDE](./assets/zenith-screenshot.png)
 
+## 🎯 Enfoque del producto
+
+Zenith IDE esta pensado como una herramienta local para explorar flujos de desarrollo asistidos por IA con mas control que una simple ventana de chat. El objetivo del proyecto es juntar edicion, terminal, contexto del archivo y preview en una sola experiencia.
+
 ## 🚀 Características Principales
 
 ### 🧠 AI Agent "Consciente"
@@ -52,8 +56,13 @@ Zenith IDE es un editor de código moderno construido con **Electron** y **React
    ```
 
 3. **Configurar variables de entorno**
-   
-   Crea un archivo `.env` en la raíz del proyecto:
+
+   Copia `.env.example` a `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+
+   Luego agrega tu API key:
    ```env
    GEMINI_API_KEY=tu_api_key_aqui
    ```
