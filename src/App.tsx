@@ -66,7 +66,7 @@ const App = () => {
         }
       });
     }
-  }, [currentView, projectPath, activeFilePath, unsavedFilePaths]);
+  }, [currentView, projectPath, activeFilePath, unsavedFilePaths, setFiles, updateFileContent]);
 
   //
   useEffect(() => {

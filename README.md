@@ -1,5 +1,8 @@
 # ⚡ Zenith IDE
 
+[![CI](https://github.com/Victor00128/EDITOR-CODE/actions/workflows/ci.yml/badge.svg)](https://github.com/Victor00128/EDITOR-CODE/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-0F172A.svg)](./LICENSE)
+
 > A Cyberpunk-themed Integrated Development Environment powered by AI.
 
 Zenith IDE es un editor de código moderno construido con **Electron** y **React**, diseñado para potenciar la productividad mediante la integración profunda de Inteligencia Artificial (Gemini). No es solo un wrapper de chat; el agente tiene control sobre el sistema de archivos, terminal real y capacidad de "auto-reparación".
@@ -78,6 +81,20 @@ Zenith IDE esta pensado como una herramienta local para explorar flujos de desar
    ```bash
    npm run electron-pack
    ```
+
+## 🧪 Calidad
+
+- CI en GitHub Actions para `lint`, `typecheck` y `test`
+- Changelog publico en [CHANGELOG.md](CHANGELOG.md)
+- Tests humo para store y puente del servicio de IA
+
+### Scripts de calidad
+
+```bash
+npm run lint
+npm run typecheck
+npm run test
+```
 
 ## 🎯 Uso Básico
 

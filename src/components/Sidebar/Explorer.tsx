@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useStore } from '../../store/useStore';
 import { fileService } from '../../services/fileService';
 import { FileNode } from '../../types/electron';
-import { Folder, FolderOpen, FileCode2, ChevronRight, ChevronDown, FileJson, FileType, FilePlus, Trash2 } from 'lucide-react';
+import { Folder, FolderOpen, FileCode2, ChevronRight, ChevronDown, FilePlus, Trash2 } from 'lucide-react';
 
 //
 const TreeItem = ({ node, level, onFileClick, activePath, unsavedPaths, onContextMenu }: any) => {

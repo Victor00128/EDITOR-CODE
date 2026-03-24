@@ -48,7 +48,7 @@ const WebPreview: React.FC<WebPreviewProps> = ({ files, refreshTrigger }) => {
             try {
               const content = await window.electronAPI.readFile(f.path);
               return { name: f.name, content };
-            } catch (e) {
+            } catch {
               return { name: f.name, content: '' };
             }
           })
@@ -59,7 +59,7 @@ const WebPreview: React.FC<WebPreviewProps> = ({ files, refreshTrigger }) => {
             try {
               const content = await window.electronAPI.readFile(f.path);
               return { name: f.name, content };
-            } catch (e) {
+            } catch {
               return { name: f.name, content: '' };
             }
           })

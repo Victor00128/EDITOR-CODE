@@ -17,7 +17,7 @@ const extractTextFromNode = (node: any): string => {
 };
 
 const AIAgent: React.FC = () => {
-  const { chatHistory, addChatMessage, files, activeFilePath, activeFileContent, updateFileContent, setPendingDiff, projectPath, setFiles } = useStore();
+  const { chatHistory, addChatMessage, activeFilePath, activeFileContent, setPendingDiff, projectPath, setFiles } = useStore();
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [copiedId, setCopiedId] = useState<string | null>(null);
@@ -80,7 +80,7 @@ const AIAgent: React.FC = () => {
                   let original = '';
                   try {
                     original = await fileService.readFile(fullPath);
-                  } catch (e) {
+                  } catch {
                     // Archivo nuevo, original vacío
                   }
                   return {
@@ -152,7 +152,7 @@ const AIAgent: React.FC = () => {
         text: responseText,
         timestamp: new Date()
       });
-    } catch (error) {
+    } catch {
       addChatMessage({
         id: (Date.now() + 1).toString(),
         role: 'ai',
@@ -221,7 +221,7 @@ const AIAgent: React.FC = () => {
                   <ReactMarkdown
                     rehypePlugins={[rehypeHighlight]}
                     components={{
-                      code({ node, inline, className, children, ...props }: any) {
+                      code({ node: _node, inline, className, children, ...props }: any) {
                         const match = /language-(\w+)/.exec(className || '');
                         // Limpiamos el código para los botones de acción
                         const cleanCode = extractTextFromNode(children).replace(/\n$/, '');

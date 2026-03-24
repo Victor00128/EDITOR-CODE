@@ -20,8 +20,8 @@
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     
-    /* SOLUCIÓN PARA import.meta.env */
-    "types": ["vite/client"] 
+    /* SOLUCION PARA import.meta.env y temporizadores */
+    "types": ["vite/client", "node"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

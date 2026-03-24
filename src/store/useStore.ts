@@ -127,7 +127,7 @@ export const useStore = create<AppState>((set, get) => ({
   closeFile: (path) => {
     const { openFiles, activeFilePath } = get();
     const newOpenFiles = openFiles.filter(p => p !== path);
-    let newActive = activeFilePath === path ? (newOpenFiles.length ? newOpenFiles[newOpenFiles.length - 1] : null) : activeFilePath;
+    const newActive = activeFilePath === path ? (newOpenFiles.length ? newOpenFiles[newOpenFiles.length - 1] : null) : activeFilePath;
     // Si cerramos todo, limpiamos contenido
     const content = newActive === activeFilePath ? get().activeFileContent : '';
     set({ openFiles: newOpenFiles, activeFilePath: newActive, activeFileContent: content });

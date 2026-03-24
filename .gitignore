@@ -6,6 +6,7 @@ npm-debug.log*
 dist/
 dist-electron/
 build/
+*.tsbuildinfo
 
 # Env
 .env

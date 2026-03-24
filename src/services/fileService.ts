@@ -1,4 +1,3 @@
-import { FileNode } from '../types/electron';
 import { useStore } from '../store/useStore'; // Importar store para leer estructura
 
 export const fileService = {
