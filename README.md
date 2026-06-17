@@ -5,90 +5,90 @@
 
 > A Cyberpunk-themed Integrated Development Environment powered by AI.
 
-Zenith IDE es un editor de código moderno construido con **Electron** y **React**, diseñado para potenciar la productividad mediante la integración profunda de Inteligencia Artificial (Gemini). No es solo un wrapper de chat; el agente tiene control sobre el sistema de archivos, terminal real y capacidad de "auto-reparación".
+Zenith IDE is a modern code editor built with **Electron** and **React**, designed to boost productivity through deep AI integration (Gemini). It's not just a chat wrapper; the agent has control over the file system, a real terminal, and "self-healing" capabilities.
 
 ![Zenith IDE](./assets/zenith-screenshot.png)
 
-## 🎯 Enfoque del producto
+## 🎯 Product focus
 
-Zenith IDE esta pensado como una herramienta local para explorar flujos de desarrollo asistidos por IA con mas control que una simple ventana de chat. El objetivo del proyecto es juntar edicion, terminal, contexto del archivo y preview en una sola experiencia.
+Zenith IDE is meant as a local tool for exploring AI-assisted development workflows with more control than a simple chat window. The project's goal is to bring editing, terminal, file context, and preview together into a single experience.
 
-## 🚀 Características Principales
+## 🚀 Key features
 
-### 🧠 AI Agent "Consciente"
-- **Gestión de Archivos:** El agente puede crear, leer, modificar y eliminar archivos y carpetas directamente.
-- **Context Aware:** Entiende la estructura completa de tu proyecto y el archivo que estás editando.
-- **Diff View Multi-archivo:** Revisa los cambios propuestos por la AI en una vista de diferencias (Diff) antes de aplicarlos.
+### 🧠 "Aware" AI agent
+- **File management:** the agent can create, read, modify, and delete files and folders directly.
+- **Context aware:** it understands your project's full structure and the file you're editing.
+- **Multi-file diff view:** review the AI's proposed changes in a diff view before applying them.
 
-### 🛡️ Self-Healing Preview
-- **Detección de Errores en Tiempo Real:** El entorno de previsualización web captura errores de ejecución (JavaScript) y los envía de vuelta al agente de AI.
-- **Auto-Fix:** La AI recibe el error automáticamente y propone una solución en el código.
+### 🛡️ Self-healing preview
+- **Real-time error detection:** the web preview environment captures runtime (JavaScript) errors and sends them back to the AI agent.
+- **Auto-fix:** the AI receives the error automatically and proposes a fix in the code.
 
-### 💻 Terminal Real Integrada
-- Implementación de **xterm.js** conectada a **node-pty** mediante IPC de Electron.
-- Ejecuta comandos reales del sistema (`npm`, `git`, `docker`) directamente desde el IDE.
+### 💻 Integrated real terminal
+- **xterm.js** wired to **node-pty** through Electron IPC.
+- Runs real system commands (`npm`, `git`, `docker`) straight from the IDE.
 
-### ⚡ Experiencia de Desarrollo
-- **Monaco Editor:** El mismo núcleo que VS Code, con resaltado de sintaxis y minimapa.
-- **AI Autocomplete:** Sugerencias de código inteligentes mientras escribes (con debounce para rendimiento).
-- **Hot Reloading:** El árbol de archivos se actualiza en tiempo real si hay cambios externos (usando `chokidar`).
-- **Búsqueda Global:** Búsqueda rápida de texto y Regex en todo el proyecto.
+### ⚡ Development experience
+- **Monaco Editor:** the same core as VS Code, with syntax highlighting and a minimap.
+- **AI autocomplete:** smart code suggestions as you type (debounced for performance).
+- **Hot reloading:** the file tree updates in real time when there are external changes (using `chokidar`).
+- **Global search:** fast text and Regex search across the whole project.
 
-## 🛠️ Tech Stack
+## 🛠️ Tech stack
 
-| Categoría | Tecnologías |
+| Category | Technologies |
 |-----------|-------------|
 | **Core** | Electron, React, TypeScript, Vite |
-| **State Management** | Zustand |
-| **Editor & Terminal** | Monaco Editor, XTerm.js, Node-PTY |
+| **State management** | Zustand |
+| **Editor & terminal** | Monaco Editor, XTerm.js, Node-PTY |
 | **AI** | Google Generative AI (Gemini) |
 | **Styling** | TailwindCSS |
-| **File System** | Node.js FS, Chokidar |
+| **File system** | Node.js FS, Chokidar |
 
-## 📦 Instalación y Uso
+## 📦 Installation & usage
 
-1. **Clonar el repositorio**
+1. **Clone the repository**
    ```bash
    git clone https://github.com/Victor00128/EDITOR-CODE.git
    cd EDITOR-CODE
    ```
 
-2. **Instalar dependencias**
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-3. **Configurar variables de entorno**
+3. **Configure environment variables**
 
-   Copia `.env.example` a `.env`:
+   Copy `.env.example` to `.env`:
    ```bash
    cp .env.example .env
    ```
 
-   Luego agrega tu API key:
+   Then add your API key:
    ```env
-   GEMINI_API_KEY=tu_api_key_aqui
+   GEMINI_API_KEY=your_api_key_here
    ```
    
-   Obtén tu API key en: [Google AI Studio](https://aistudio.google.com/app/apikey)
+   Get your API key at: [Google AI Studio](https://aistudio.google.com/app/apikey)
 
-4. **Ejecutar en modo desarrollo**
+4. **Run in development mode**
    ```bash
    npm run dev
    ```
 
-5. **Crear build de producción**
+5. **Create a production build**
    ```bash
    npm run electron-pack
    ```
 
-## 🧪 Calidad
+## 🧪 Quality
 
-- CI en GitHub Actions para `lint`, `typecheck` y `test`
-- Changelog publico en [CHANGELOG.md](CHANGELOG.md)
-- Tests humo para store y puente del servicio de IA
+- GitHub Actions CI for `lint`, `typecheck`, and `test`
+- Public changelog in [CHANGELOG.md](CHANGELOG.md)
+- Smoke tests for the store and the AI service bridge
 
-### Scripts de calidad
+### Quality scripts
 
 ```bash
 npm run lint
@@ -96,18 +96,18 @@ npm run typecheck
 npm run test
 ```
 
-## 🎯 Uso Básico
+## 🎯 Basic usage
 
-1. Abre el IDE y selecciona una carpeta de proyecto con **"Open Local Folder"**
-2. Navega por tus archivos en el **Explorer** (panel izquierdo)
-3. Edita código en el **Editor** central con syntax highlighting
-4. Usa el **AI Agent** (panel derecho) para:
-   - Generar código nuevo
-   - Modificar archivos existentes
-   - Obtener explicaciones del código
-5. Visualiza tus cambios en tiempo real con el **Live Preview**
-6. Ejecuta comandos en la **Terminal** integrada
+1. Open the IDE and select a project folder with **"Open Local Folder"**
+2. Browse your files in the **Explorer** (left panel)
+3. Edit code in the central **Editor** with syntax highlighting
+4. Use the **AI Agent** (right panel) to:
+   - Generate new code
+   - Modify existing files
+   - Get code explanations
+5. See your changes in real time with the **Live Preview**
+6. Run commands in the integrated **Terminal**
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+This project is under the MIT License. See the [LICENSE](LICENSE) file for details.
